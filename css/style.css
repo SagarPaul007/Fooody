@@ -117,24 +117,28 @@ main .hero .right {
     height: 100%;
     display: flex;
     align-items: center;
+    overflow: hidden;
 }
 
 main .hero .right img {
     display: block;
     max-width: 90%;
     filter: drop-shadow(2px 10px 3px rgba(0, 0, 0, 0.4));
+    animation: moveFromRight 1s ease-out;
 }
 
 .heading {
     font-size: 60px;
     font-weight: 600;
     margin-bottom: 30px;
+    animation: moveFromTop 0.75s ease-out;
 }
 
 .sub {
     color: rgba(0, 0, 0, 0.8);
     font-size: 25px;
     font-weight: 300;
+    animation: moveFromBottom 0.75s ease-out;
 }
 
 .arrow {
@@ -230,8 +234,46 @@ main .hero .bg {
     line-height: 30px;
 }
 
-footer{
+footer {
     text-align: center;
     margin-bottom: 30px;
     color: var(--color-primary);
+}
+
+/* animations */
+
+@keyframes moveFromTop {
+    0% {
+        transform: translateY(-100px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+
+@keyframes moveFromBottom {
+    0% {
+        transform: translateY(80px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+
+@keyframes moveFromRight {
+    0% {
+        transform: translateX(100px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0px);
+        opacity: 1;
+    }
 }
