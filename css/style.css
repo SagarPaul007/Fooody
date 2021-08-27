@@ -5,7 +5,7 @@
     --color-secondary: rgb(255, 246, 246);
     --color-bg: rgb(255, 228, 228);
     --color-white: #fff;
-    --color-primary-light: #ff9597;
+    --color-primary-light: #ff8183;
 }
 
 * {
@@ -52,7 +52,7 @@ nav .menu {
     display: flex;
 }
 
-nav .menu .form-search {
+.form-search {
     font-size: 18px;
     background-color: var(--color-secondary);
     display: flex;
@@ -67,9 +67,12 @@ label,
 }
 
 .search {
+    font-size: 16px;
+    width: 250px;
     border: none;
     outline: none;
     margin: 0 10px;
+    padding-left: 10px;
     border-right: 1px solid var(--color-primary);
     background-color: var(--color-secondary);
 }
@@ -111,8 +114,9 @@ main .hero .left {
 
 main .hero .right {
     width: 40%;
-    display: grid;
-    place-items: center;
+    height: 100%;
+    display: flex;
+    align-items: center;
 }
 
 main .hero .right img {
@@ -144,6 +148,10 @@ main .hero .right img {
     border-radius: 80px 80px 80px 0;
 }
 
+.bottom-search {
+    display: none;
+}
+
 main .hero .bg {
     position: absolute;
     top: 0;
@@ -158,7 +166,7 @@ main .hero .bg {
 /* random recipe */
 
 .random {
-    padding: 100px 8%;
+    padding: 80px 8% 50px 8%;
     text-align: center;
 }
 
@@ -175,6 +183,7 @@ main .hero .bg {
 
 .recipe {
     padding: 30px 60px;
+    margin-bottom: 20px;
     background-color: var(--color-bg);
     border-radius: 0 100px 0 0;
 }
@@ -219,4 +228,10 @@ main .hero .bg {
     color: rgba(0, 0, 0, 0.8);
     font-size: 18px;
     line-height: 30px;
+}
+
+footer{
+    text-align: center;
+    margin-bottom: 30px;
+    color: var(--color-primary);
 }
