@@ -64,6 +64,7 @@
 
     main .hero .right img {
         max-width: 75%;
+        animation: none;
     }
 
 
